@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise8</title>
+</head>
+<body>
+    <script>
+        var songay = 0;
+        var month = parseInt(prompt("Input month: "));
+        var year = parseInt(prompt("Input year: "));
+        if(month >=1 && month <=12){
+            switch(month){
+                case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+                    songay = 31;
+                break;
+                case 4:case 6:case 9:case 11:
+                    songay = 30;
+                break;
+                case 2:
+                if((year % 4 == 0 && year % 100 != 0) || year %400 == 0)
+                    songay = 29;
+                else
+                    songay = 28;
+                break;        
+            }
+            alert("\nThang "+ month + " nam "+ year + " co "+ songay +" ngay");
+        }else
+            alert("Thang k hop le! Xin moi nhap lai!");
+    </script>
+</body>
+</html>

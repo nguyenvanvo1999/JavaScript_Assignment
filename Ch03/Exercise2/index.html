@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise2</title>
+</head>
+<body>
+    <script>
+        var math = parseFloat(prompt("Enter sorce math: "));
+        var physics = parseFloat(prompt("Enter sorce physics: "));
+        var chemistry = parseFloat(prompt("Enter sorce chemistry: "));
+        var avg;
+        if(isNaN(math) || isNaN(physics) || isNaN(chemistry) || math<0 || physics<0 || chemistry<0||math>10 || physics>10 || chemistry>10)
+        {
+            alert("Enter again please!");
+
+        }
+        else
+        {
+            avg = (math + physics + chemistry)/3;
+            avg = avg.toFixed(2);
+        }
+        if(avg >= 8){
+            alert("Rank A, avg = "+ avg);
+        }
+        else if(avg >= 6.5){
+            alert("Rank B, avg = "+ avg);
+        }
+        else if(avg >= 5){
+            alert("Rank C, avg = "+ avg);
+        }
+        else{
+            alert("Rank D, avg = "+ avg);
+        }
+    </script>
+</body>
+</html>

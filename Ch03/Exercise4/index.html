@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise4</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt("Enter a: "));
+        var b = parseFloat(prompt("Enter b: "));
+        var c = parseFloat(prompt("Enter c: "));
+        var x;
+        //ax^2 + bx + c = 0
+        if(a==0){
+            if(b==0){
+                if(c==0){
+                    alert("PT VSN");
+                }
+                else{
+                    alert("PT VN");
+                }
+            }
+            else{
+                alert("PT co nghiemduy nhat: x = "+ (-c/b));
+            }
+        }else{
+            var delta = b*b - 4*a*c;
+            if(delta > 0){
+                var x1 = (-b + Math.sqrt(delta)) / (2*a);
+                var x2 = (-b - Math.sqrt(delta)) / (2*a);
+                alert("nghiem thu 1: "+ x1 + "\nNghiem thu 2: "+ x2);
+            }
+            else if(delta == 0){
+                var sum = -b / (2*a);
+                alert("PT co nghiem kep: x1 = x2 = " + sum);
+            }
+            else{
+                alert("PT VN");
+            }
+        }
+    </script>
+</body>
+</html>
