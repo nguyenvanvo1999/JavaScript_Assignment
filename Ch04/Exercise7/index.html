@@ -33,11 +33,11 @@
 
         if (confirm("Do you want to print student information to the screen? ")) {
             for (var i = 0; i <= studentList.length; i++) {
-                document.write("Student "+ i +
-                    "<br>Student Code: " + studentList[i]["studentCode"] +
+                document.write("<h2>Student "+ i +"</h2>"+
+                    "Student Code: " + studentList[i]["studentCode"] +
                     "<br>Student Name: " + studentList[i]["studentName"] +
                     "<br>Student Age: " + studentList[i]["studentAge"] +
-                    "<br>Student Sex: " + studentList[i]["studentSex"] + "<br>"
+                    "<br>Student Sex: " + studentList[i]["studentSex"]
                 );
             }
         }
